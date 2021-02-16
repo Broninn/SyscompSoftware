@@ -1,16 +1,21 @@
 body {
     margin: 0px;
-    background-color: #eee;
+    background-color: #FFF;
+}
+:root {
+    --color-blue: #4387CB; /* var(--color-blue); */
+    --color-hover-blue: #4E8BA6; /* var(--color-hover-blue); */
+    --color-gray: #868686; /* var(--color-gray); */
 }
 /* PRINCIPAL */
 #principal {
     width: 100%;
 }
 a {
-    color: black;
+    color:  var(--color-gray);
 }
 a:visited {
-    color: black;
+    color:  var(--color-gray);
 }
 
 /* HEADER */
@@ -18,7 +23,7 @@ header {
     font-family: 'Fira Code', monospace;
     font-size: 14px;
     margin: auto;
-    height: 120px;
+    height: 80px;
     display: flex;
     justify-content: center;
 }
@@ -26,15 +31,37 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
 }
-.container .logo {
+.containerheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    background-color: #FFF;
+    box-shadow: black 0px 0px 10px;
+}
+.containerheader .logo {
     width: 50%;
     display: flex;
     align-items: center;
 }
-.container .logo img{
+.containerheader .logo img{
     width: 200px;
+}
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.mm_line {
+    height: 3px;
+    background-color: #25C5D9;
 }
 nav ul, 
 nav li {
@@ -53,16 +80,16 @@ nav a {
     font-size: 20px;
 }
 nav a:hover {
-    background-color: #4E8BA6;
+    background-color: var(--color-hover-blue);
     color: #FFF;
   }
-.container .menu {
+.containerheader .menu {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
 }
-.container .menu .item {
+.containerheader .menu .item {
     padding: 10px;
     justify-content: center;
     align-items: center;
@@ -71,16 +98,20 @@ nav a:hover {
 /* BANNER */
 .banner {
     width: 80%;
-    height: 300px;
+    height: 250px;
     margin-left: 10%;
-    background-color: #25C5D9; 
+    background-color: var(--color-blue); 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+.coverbanner {
+    display: none;
+}
 .banner .bannertexto {
-    font-size: 40px;
+    font-size: 38px;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 .banner .bannerlogo img {
     width: 350px;
@@ -93,6 +124,8 @@ nav a:hover {
     font-size: 36px;
 }
 .videoapresentacao {
+    margin-top: 25px;
+    margin-bottom: 25px;
     padding-top: 20px;
     width: 80%;
     margin-left: 10%;
@@ -107,17 +140,37 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     width: 100%;
 }
 .text h1{
-    font-size: 30px;
+    font-size: 28px;
     margin-top: 50px;
     margin-bottom: 30px;
     font-family: 'Roboto', sans-serif;
 }
 .text h2 {
-    font-size: 26px;
+    font-size: 24px;
     margin-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+    color:  var(--color-gray);
+}
+.abouttext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.abouttext h1{
+    font-size: 28px;
+    margin-top: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+.solucoesprincipal .grid .abouttext p {
+    font-size: 15px;
+    margin-bottom: 25px;
     font-family: 'Roboto', sans-serif;
 }
 .solucoesprincipal {
@@ -144,6 +197,9 @@ nav a:hover {
     align-items: center;
     width: 45%;
     font-size: 28px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 0.25rem;
 }
 .propriedade1 {
     width: 100%;
@@ -165,39 +221,56 @@ nav a:hover {
     justify-content: center;
 }
 
+.solucoesprincipal .grid .item svg {
+    width: 100px;
+    height: 100px;
+}
 .solucoesprincipal .grid .item img {
     width: 100px;
     height: 100px;
 }
 .solucoesprincipal .grid .item p:hover {
-    color: cornflowerblue;
+    color: var(--color-hover-blue);
+    transition: 0.5s;
 }
 .solucoesprincipal .grid .item:hover {
-    color: cornflowerblue;
-    border-color: cornflowerblue;
+    color: var(--color-hover-blue);
+    border-color: var(--color-hover-blue);
+    transition: 0.3s;
+}
+.solucoesprincipal .grid .item:hover path{
+    fill: var(--color-hover-blue);
+    transition: 0.3s;
 }
 .solucoesprincipal .button {
+    width: auto;
     margin-top: 50px;
     padding-bottom: 50px;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
-.solucoesprincipal .button input {
+.solucoesprincipal .button a{
+    display: flex;
+    justify-content: center;
+    border: 5px solid var(--color-blue);
+    padding: 10px;
+    align-items: center;
+    text-decoration: none;
     font-size: 28px;
     color: black;
-    border: 5px solid #25C5D9;
-    padding: 10px;
+    border-radius: 0.25rem;
 }
-.solucoesprincipal .button input:hover {
-    background-color: #25C5D9;
+.solucoesprincipal .button a:hover {
+    background-color: var(--color-blue);
     padding: 10px;
+    color: #FFF;
+    transition: 0.3s;
 }
 
 /* FOOTER */
 .footer {
-    width: 80%;
-    background-color: #25C5D9; 
-    margin-left: 10%;
+    background-color: var(--color-blue); 
     font-family: 'Fira Code', monospace;
     font-size: 14px;
 }
@@ -208,6 +281,7 @@ nav a:hover {
     height: 200px;
     justify-content: center;
     align-items: center;
+    box-shadow: black 0px 0px 10px;
 }
 .footer .logo {
     width: 50%;
@@ -250,17 +324,36 @@ nav a:hover {
 .referencias {
     padding-left: 6.5%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    color: #FFF;
+    margin-left: 0;
+    padding-left: 0;
+
+}
+.referencias a{
+    color: #FFF;
+    text-decoration: none;
 }
 .midias {
     padding: 10px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
 }
-.midias img{
+.midias svg{
     width: 30px;
     height: 30px;
+    margin-right: 18px;
+    fill: white;
+}
+small {
+    border-top: solid cadetblue 2px;
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 @media only screen and (max-width:1100px) {
@@ -281,5 +374,123 @@ nav a:hover {
         flex-flow: column;
         align-items: center;
         font-size: 28px;
+        margin-top:10px;
+        width: 80%;
+    }
+    .footer .logo a {
+        width: 200px;
+    }
+    small {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width:1000px) {
+    .header {
+        font-family: 'Fira Code', monospace;
+        font-size: 14px;
+        width: 80%;
+        margin-left: 10%;
+    }
+    header {
+        height: auto;
+    }
+    header .container {
+        flex-direction: row;
+    }
+    nav ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #FFF;
+    }
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .coverbanner {
+        background-color: chartreuse;
+        height: 80px;
+        display: block;
+    }
+    .banner {
+        height: 200px;
+    }
+    .banner .bannerlogo img {
+        width: 250px;
+        height: 250px;
+    }
+    .banner .bannertexto {
+        padding-left: 10px;
+    }
+    .solucoesprincipal .grid {
+        flex-flow: column wrap;
+        display: flex;
+    }
+    .solucoesprincipal .grid .item {
+        margin: auto;
+        border: solid black;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        font-size: 28px;
+        margin-top:10px;
+        width: 80%;
+    }
+    small {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width:650px){
+    .banner {
+        height: 150px;
+        justify-content: center;
+    }
+    .banner .bannerlogo img {
+        display: none;
+    }
+    .banner .bannertexto {
+        font-size: 30px;
+        padding: 0;
+        margin: 0;
+    }
+    .text h1 {
+        font-size: 28px ;
+        padding-bottom: 0;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .text h2 {
+        font-size: 26px ;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    .solucoesprincipal .grid .item {
+        padding: 0;
+        width: 100%;
+    }
+    .solucoesprincipal .grid .item svg {
+        width: 80px;
+        height: 80px;
+    }
+    .containerfooter .logo {
+        display: none;
+    }
+    .containerfooter .menu .referencias {
+        display: flex;
+        justify-content: center;
+    }
+    .referencias ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+    }
+    .video {
+        width: 400px;
+        height: 230px;
     }
 }
