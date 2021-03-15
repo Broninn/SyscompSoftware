@@ -531,6 +531,18 @@ small {
     .solucoes .grid .item {
         width: 300px;
     }
+    .informacoes {
+        display: flex;
+        flex-direction: column;
+    }
+    .informacoes-left {
+        order: 2;
+        width: 100%;
+    }
+    .informacoes-right {
+        order: 1;
+        width: 65%;
+    }
 }
 @media only screen and (max-width:1000px) {
     header {
@@ -692,5 +704,10 @@ small {
     .video {
         width: 400px;
         height: 230px;
+    }
+    .informacoes-right {
+        order: 1;
+        min-width: 300px;
+        max-width: 400px;
     }
 }
