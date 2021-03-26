@@ -8,6 +8,9 @@ body {
     --color-hover-blue: #4E8BA6; /* var(--color-hover-blue); */
     --color-gray: #868686; /* var(--color-gray); */
 }
+span {
+    color: var(--color-blue);
+}
 /* PRINCIPAL */
 #principal {
     width: 100%;
@@ -18,97 +21,12 @@ a {
 a:visited {
     color:  var(--color-gray);
 }
-
-/* HEADER */
-header {
-    font-family: 'Fira Code', monospace;
-    font-size: 12px;
-    margin: auto;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-}
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-.containerheader {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    position: fixed;
-    height: 80px;
-    background-color: #FFF;
-    box-shadow: black 0px 0px 10px;
-}
-.containerheader-item {
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.containerheader .logo {
-    width: 50%;
-    display: flex;
-}
-.containerheader .logo img{
-    width: 200px;
-}
-.menuMobile {
-    display: none;
-    width: 40px;
-    height: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-.mm_line {
-    height: 3px;
-    background-color: #25C5D9;
-}
-nav ul, 
-nav li {
-    list-style: none;
-    padding: 0;
-    margin:0;
-}
-nav li {
-    position: relative;
-}
-nav ul {
-    display: flex;
-}
-nav a {
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-}
-nav a:hover {
-    background-color: var(--color-hover-blue);
-    color: #FFF;
-  }
-.containerheader .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-.containerheader .menu .item {
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
 /* BANNER */
 .banner {
     width: 80%;
     height: 250px;
     margin-left: 10%;
-    background-color: var(--color-blue); 
+    background-image: url(img/banner.bmp);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,6 +38,15 @@ nav a:hover {
     font-size: 38px;
     color: white;
     font-family: 'Roboto', sans-serif;
+    width: 500px;
+    text-shadow: 2px 2px black;
+    padding-left: 30px;
+}
+.banner .bannertexto h1 {
+    font-size: 30px;
+}
+.banner .bannertexto h3 {
+    font-size: 20px;
 }
 .banner .bannerlogo img {
     width: 350px;
@@ -181,10 +108,28 @@ nav a:hover {
     margin-bottom: 25px;
     font-family: 'Roboto', sans-serif;
 }
+.infotext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.infotext h1{
+    font-size: 30px;
+    margin-top: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+.solucoes .grid .infotext p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+}
 .solucoes {
     margin-left: 10%;
     width: 80%;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .solucoes p {
     margin-left: 10%;
@@ -207,7 +152,6 @@ nav a:hover {
 .solucoes .grid .item {
     display: flex;
     flex-flow: row wrap;
-    width: 130px;
     border: solid black 2px;
     flex-flow: column wrap;
     align-items: center;
@@ -215,6 +159,8 @@ nav a:hover {
     padding: 15px 30px 15px 30px;
     border-radius: 0.25rem;
     margin-bottom: 20px;
+    width: 130px;
+    margin: 5px;
 }
 .propriedade1 {
     width: inherit;
@@ -223,12 +169,28 @@ nav a:hover {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 .propriedade2 {
     width: inherit;
     display: flex;
     justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    cursor: pointer;
+}
+.propriedade1,
+.propriedade2,
+.item,
+.item a,
+.propriedade2 {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.propriedade2:hover,
+.item a:hover {
+    color: var(--color-hover-blue);
+    transition: 0.5s;
 }
 
 .solucoes .grid .item svg {
@@ -252,14 +214,14 @@ nav a:hover {
     fill: var(--color-hover-blue);
     transition: 0.3s;
 }
-.solucoes .button {
+.informacao .button {
     width: auto;
     margin-top: 30px;
     display: flex;
     justify-content: center;
     text-align: center;
 }
-.solucoes .button a{
+.informacao .button a{
     display: flex;
     justify-content: center;
     border: 5px solid var(--color-blue);
@@ -268,9 +230,10 @@ nav a:hover {
     text-decoration: none;
     font-size: 26px;
     color: black;
+    margin-bottom: 50px;
     border-radius: 0.25rem;
 }
-.solucoes .button a:hover {
+.informacao .button a:hover {
     background-color: var(--color-blue);
     padding: 10px;
     color: #FFF;
@@ -283,10 +246,10 @@ nav a:hover {
     margin-bottom: 50px;
 }
 .solucoesprincipal p {
-    margin-left: 10%;
-    margin-right: 10%;
-    font-size: 18px;
+    font-size: 20px;
     text-align: justify;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 .solucoesprincipal .grid {
     width: 100%;
@@ -386,6 +349,10 @@ nav a:hover {
     margin-top: 15px;
     margin-bottom: 50px;
 }
+.informacoes strong {
+    color: var(--color-blue);
+    font-size: 20px;
+}
 .informacoes-left {
     width: 50%;
     display: flex;
@@ -396,6 +363,8 @@ nav a:hover {
 }
 .informacoes-left p{
     text-align: justify;
+    font-size: 20px;
+    line-height: 25px;
 }
 .informacoes-left h1{
     font-size: 30px;
@@ -407,12 +376,36 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     width: 50%;
+    height: 300px;
     background-color: var(--color-blue);
     border-radius: 20px;
 }
 .informacoes-right img {
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 155px;
+}
+.informacoes-right-white {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 0px;
+}
+.add350 img{
+    width: 80%;
+    height: auto;
+}
+.add250 img{
+    width: 60%;
+    height: auto;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .informacoes a {
     display: flex;
@@ -423,7 +416,7 @@ nav a:hover {
     width: 80px;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
     padding: 10px 30px;
     border-radius: 20px;
@@ -435,93 +428,6 @@ nav a:hover {
     border: 2px solid var(--color-blue);
 }
 
-
-/* FOOTER */
-.footer {
-    background-color: var(--color-blue); 
-    font-family: 'Fira Code', monospace;
-    font-size: 14px;
-}
-.footer .containerfooter {
-    display: flex;
-    flex-direction: row;
-    font-size: 14px;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: black 0px 0px 10px;
-}
-.footer .logo {
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-}
-.footer .logo a {
-    margin: auto;
-    width: 300px;
-}
-.cls-1,.cls-2 {
-    fill:white;
-}
-.cls-1 {
-    fill-rule:evenodd;
-}
-.footer .menu {
-    width: 50%;
-    height: 80%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-}
-.footer .menu li{
-    list-style: none;
-    display: flex;
-    justify-content: flex-start;
-    padding: 10px;
-    font-size: 15px;
-    align-items: flex-end;
-}
-.footer .menu .item {
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-}
-.referencias {
-    padding-left: 6.5%;
-    display: flex;
-    justify-content: center;
-    color: #FFF;
-    margin-left: 0;
-    padding-left: 0;
-}
-.referencias a{
-    color: #FFF;
-    text-decoration: none;
-}
-.midias {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.midias svg{
-    width: 30px;
-    height: 30px;
-    margin-right: 18px;
-    fill: white;
-}
-small {
-    border-top: solid cadetblue 2px;
-    display: flex;
-    justify-content: center;
-    color: #FFF;
-    font-size: 14px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
 /* MEDIA ONLY */
 @media only screen and (max-width:1250px) {
     .solucoes-item {
@@ -530,6 +436,9 @@ small {
     }
     .solucoes .grid .item {
         width: 300px;
+    }
+    .informacao {
+        margin-top: 80px;
     }
     .informacoes {
         display: flex;
@@ -544,43 +453,21 @@ small {
         width: 65%;
     }
 }
+
+/* MEDIA ####################################################################################################################### */
 @media only screen and (max-width:1000px) {
-    header {
-        height: auto;
-    }
-    header .container {
-        flex-direction: row;
-    }
-    .header {
-        font-family: 'Fira Code', monospace;
-        font-size: 12px;
-        width: 80%;
-        margin-left: 10%;
-    }
-    nav ul {
-        flex-direction: column;
-        display: none;
-        position: absolute;
-        left: 0;
-        top:80px;
-        width: 100%;
-        background-color: #FFF;      
-    }
-    nav ul li {
-        border: var(--color-blue) solid 1px;
-        text-align: center;
-    }
-    .menuMobile {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
     .coverbanner {
         height: 80px;
         display: block;
     }
     .banner {
         height: 200px;
+    }
+    .banner .bannertexto h1 {
+        font-size: 24px;
+    }
+    .banner .bannertexto h3 {
+        font-size: 18px;
     }
     .banner .bannerlogo img {
         width: 250px;
@@ -604,8 +491,12 @@ small {
         margin-top:10px;
         width: 50%;
     }
-    .solucoes .button a{
+    .informacao .button a{
         font-size: 20px;
+    }
+    .informacoes-right-white {
+        display: flex;
+        flex-direction: column;
     }
     .solucoesprincipal .grid {
         flex-flow: column wrap;
@@ -624,6 +515,15 @@ small {
     .solucoesprincipal .button a{
         font-size: 20px;
     }
+    .infotext h1,
+    .informacoes-left h1 {
+        font-size: 24px;
+    }
+    .solucoesprincipal p,
+    .informacoes-left p {
+        line-height: 25px;
+        font-size:17px;
+    }
     .footer .logo a {
         width: 200px;
     }
@@ -632,9 +532,6 @@ small {
     }
 }
 @media only screen and (max-width:650px){
-    .containerheader .logo img{
-        width: 150px;
-    }
     .banner {
         height: 150px;
         justify-content: center;
@@ -643,9 +540,14 @@ small {
         display: none;
     }
     .banner .bannertexto {
-        font-size: 30px;
-        padding: 0;
+        padding-left: 30px;
         margin: 0;
+    }
+    .banner .bannertexto h1 {
+        font-size: 18px;
+    }
+    .banner .bannertexto h3 {
+        font-size: 15px;
     }
     .text h1 {
         padding-bottom: 0;
@@ -676,7 +578,6 @@ small {
         height: 80px;
     }
     .solucoesprincipal p {
-        font-size: 13px;
         margin: 0;
     }
     .solucoesprincipal .propriedade3 p {

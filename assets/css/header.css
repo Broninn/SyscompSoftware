@@ -1,0 +1,122 @@
+/* HEADER */
+header {
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    margin: auto;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.containerheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    background-color: #FFF;
+    box-shadow: black 0px 0px 10px;
+}
+.containerheader-item {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.containerheader .logo {
+    width: 50%;
+    display: flex;
+}
+.containerheader .logo img{
+    width: 200px;
+}
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.mm_line {
+    height: 3px;
+    background-color: #25C5D9;
+}
+nav ul, 
+nav li {
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+nav li {
+    position: relative;
+}
+nav ul {
+    display: flex;
+}
+nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+nav a:hover {
+    background-color: var(--color-hover-blue);
+    color: #FFF;
+  }
+.containerheader .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.containerheader .menu .item {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+} 
+
+/* MEDIAS */
+@media only screen and (max-width:1000px) {
+    header {
+        height: auto;
+    }
+    header .container {
+        flex-direction: row;
+    }
+    .header {
+        font-family: 'Fira Code', monospace;
+        font-size: 12px;
+        width: 80%;
+        margin-left: 10%;
+    }
+    nav ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0;
+        top:80px;
+        width: 100%;
+        background-color: #FFF;      
+    }
+    nav ul li {
+        border: var(--color-blue) solid 1px;
+        text-align: center;
+    }
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width:650px){
+    .containerheader .logo img{
+        width: 150px;
+    }
+}

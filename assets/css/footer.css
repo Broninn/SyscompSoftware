@@ -1,0 +1,125 @@
+/* FOOTER */
+.footer {
+    background-color: var(--color-blue); 
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+}
+.footer .containerfooter {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: black 0px 0px 10px;
+}
+.footer .logo {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+.footer .logo a {
+    margin: auto;
+    width: 300px;
+}
+.cls-1,.cls-2 {
+    fill:white;
+}
+.cls-1 {
+    fill-rule:evenodd;
+}
+.footer .menu {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.footer .menu li{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    font-size: 15px;
+    align-items: flex-end;
+}
+.footer .menu .item {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.referencias {
+    padding-left: 6.5%;
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    margin-left: 0;
+    padding-left: 0;
+}
+.referencias a{
+    color: #FFF;
+    text-decoration: none;
+}
+.midias {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.midias svg{
+    width: 30px;
+    height: 30px;
+    margin-right: 18px;
+    fill: white;
+}
+small {
+    border-top: solid cadetblue 2px;
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* MEDIAS */
+@media only screen and (max-width:1000px) {   
+    .footer .logo a {
+        width: 200px;
+    }
+    small {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:650px){
+    .containerfooter .logo {
+        display: none;
+    }
+    .containerfooter .menu .referencias {
+        display: flex;
+        justify-content: center;
+    }
+    .referencias ul {
+        display: flex;
+        margin-top: 14px;
+        margin-bottom: 14px;
+        margin-right: 0px;
+        margin-left: 0px;
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+    }
+    .midias {
+        display: flex;
+        justify-content: space-between;
+    }
+    .midias a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
