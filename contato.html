@@ -6,7 +6,7 @@
     <title>Contato</title>
     <meta name="author" content="Bruno Henrique da Silva Mosko">
     <link rel="stylesheet" type="text/css" href="assets/css/header.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="contato.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="assets/css/contato.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="assets/css/footer.css" media="screen">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
@@ -14,16 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon-16x16.png" />
+    <script src="assets/js/menu.js"></script>
     <script type="text/javascript">
-        window.onload = function () {
-            document.querySelector(".menuMobile").addEventListener("click", function () {
-                if(document.querySelector(".menu nav ul").style.display == 'flex') {
-                    document.querySelector(".menu nav ul").style.display = 'none';
-                } else {
-                    document.querySelector(".menu nav ul").style.display = 'flex';
-                }
-            });
-        }
             handleSubmit = (e) => {
             e.preventDefault()
             var emailEmail = document.getElementById('email').value;
@@ -95,70 +87,75 @@
                 </div>
             </div>
         </header>     
-       <section>
-            <div class=coverbanner></div>
-           <div class="form">
-               <header class="headerform">
-                   <h1 id="title" class="text-center">Solicite seu orçamento:</h1>
-                   <p id="description" class="description text-center">
-                    Informe as necessidades de sua empresa.</p>
-               </header>
-                <form id="survey-form">
-                    <div class ="form-group">
-                        <label for="name" id="name-label">Nome</label>
-                        <input type="text" name="name" id="name" class="form-control" placeholder="Digite seu nome:" required/>
-                    </div>
-                    <div class ="form-group">
-                        <label for="email" id="email-label">Email</label>
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu Email:" required/>
-                    </div>
-                    <div class ="form-group">
-                        <label for="number" id="number-label">Telefone</label>
-                        <input type="number" name="telefone" id="number" class="form-control" placeholder="Digite seu telefone:" required/>
-                    </div>
-                    <div class ="form-group">
-                        <p>Já possui algum sistema?</p>
-                        <label>
-                            <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />Sim
-                        </label>
-                        <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio"/>Não</label>
-                    </div>
-                    <div class="form-group">
-                        <p>
-                            Para qual finalidade será o uso do sistema?
-                            <span class="clue">(Marque todos que identificar)</span>
-                        </p>
-                        <label>
-                            <input name="prefer" value="front-end-projects" type="checkbox"class="input-checkbox"/>Emissão de Nota Fiscal
-                        </label>
-                        <label>
-                            <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox"/>Controle de Estoque
-                        </label>
-                        <label>
-                            <input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox"/>Orçamentos/ Pedidos/ Ordens de Serviços
-                        </label>
-                        <label>
-                            <input name="prefer"value="challenges"type="checkbox"class="input-checkbox"/>Ordens de Produção
-                        </label>
-                        <label
-                            ><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox"/>Vendas Mercado Livre
-                        </label>
-                        <label>
-                            <input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox" />Outros
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <p htmlFor="message"> Caso necessário, utilize o campo abaixo para complementar as informações.</p>
-                        <textarea name="comment" id="comments" class="input-textarea" placeholder="Informe-nos aqui as suas necessidades..."></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" id="submit" class="submit-button">
-                            Enviar
-                        </button>
-                    </div>
-                </form>
-           </div>
-       </section>
+       <main>
+           <section>
+                <div class=coverbanner></div>
+               <div class="form">
+                   <header class="headerform">
+                       <h1 id="title" class="text-center">Solicite seu orçamento:</h1>
+                       <p id="description" class="description text-center">
+                        Informe as necessidades de sua empresa.</p>
+                   </header>
+                    <form id="survey-form">
+                        <div class ="form-group">
+                            <label for="name" id="name-label">Nome</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Digite seu nome:" required/>
+                        </div>
+                        <div class ="form-group">
+                            <label for="email" id="email-label">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu Email:" required/>
+                        </div>
+                        <div class ="form-group">
+                            <label for="number" id="number-label">Telefone</label>
+                            <input type="number" name="telefone" id="number" class="form-control" placeholder="Digite seu telefone:" required/>
+                        </div>
+                        <div class ="form-group">
+                            <p>Já possui algum sistema?</p>
+                            <label>
+                                <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />Sim
+                            </label>
+                            <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio"/>Não</label>
+                        </div>
+                        <div class="form-group">
+                            <p>
+                                Para qual finalidade será o uso do sistema?
+                                <span class="clue">(Marque todos que identificar)</span>
+                            </p>
+                            <label>
+                                <input name="prefer" value="nota-fiscal" type="checkbox"class="input-checkbox"/>Emissão de Nota Fiscal
+                            </label>
+                            <label>
+                                <input name="prefer" value="estoque" type="checkbox" class="input-checkbox"/>Controle de Estoque
+                            </label>
+                            <label>
+                                <input name="prefer" value="orcamentos-pedidos-ordens-de-servico" type="checkbox" class="input-checkbox"/>Orçamentos/ Pedidos/ Ordens de Serviços
+                            </label>
+                            <label>
+                                <input name="prefer"value="ordens-de-producao"type="checkbox"class="input-checkbox"/>Ordens de Produção
+                            </label>
+                            <label>
+                                <input name="prefer"value="oficinas"type="checkbox"class="input-checkbox"/>Oficina
+                            </label>
+                            <label
+                                ><input name="prefer" value="e-commerce" type="checkbox" class="input-checkbox"/>E-commerce
+                            </label>
+                            <label>
+                                <input name="prefer" value="outros" type="checkbox" class="input-checkbox" />Outros
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <p htmlFor="message"> Caso necessário, utilize o campo abaixo para complementar as informações.</p>
+                            <textarea name="comment" id="comments" class="input-textarea" placeholder="Informe-nos aqui as suas necessidades..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="submit" class="submit-button">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+               </div>
+           </section>
+       </main>
         <footer>
             <div class="footer">
                 <div class="containerfooter">

@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+body {
+  margin: 0px;
+}
+:root {
+  --color-blue: #4387CB; /* var(--color-blue); */
+  --color-hover-blue: #4E8BA6; /* var(--color-hover-blue); */
+  --color-gray: #868686; /* var(--color-gray); */
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #11b14e;
+}
+/* PRINCIPAL */
+#principal {
+  width: 100%;
+}
+a {
+  color:  var(--color-gray);
+}
+a:visited {
+  color:  var(--color-gray);
+}
+
+/* HEADER */
+header {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  margin: auto;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+.container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.containerheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  position: fixed;
+  height: 80px;
+  background-color: #FFF;
+  box-shadow: black 0px 0px 10px;
+}
+.containerheader-item {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.containerheader .logo {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.containerheader .logo img{
+  width: 200px;
+}
+.menuMobile {
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.mm_line {
+  height: 3px;
+  background-color: #25C5D9;
+}
+nav ul, 
+nav li {
+  list-style: none;
+  padding: 0;
+  margin:0;
+}
+nav ul {
+  display: flex;
+}
+nav a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+nav a:hover {
+  background-color: var(--color-hover-blue);
+  color: #FFF;
+}
+.containerheader .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.containerheader .menu .item {
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FORM  */
+#title, #description {
+  color: #1c77b5;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+.form::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+.form p {
+  font-size: 1.125rem;
+}
+.form h1,
+.form p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.form label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+.form input,
+.form button,
+.form select,
+.form textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.form button {
+  border: none;
+}
+.form {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+.headerform {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+  display: flex;
+  flex-direction: column;
+}
+.description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+.text-center {
+  text-align: center;
+}
+form {
+  background: #1c77b5;
+  border-radius: 0.25rem;
+  margin-bottom: 50px;
+}
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+.form-group {
+  margin: 0 auto 1.25rem auto;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  resize: vertical;
+}
+.submit-button {
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: var(--color-green);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--color-blue); 
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+}
+.footer .containerfooter {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: black 0px 0px 10px;
+}
+.footer .logo {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+.footer .logo a {
+  margin: auto;
+  width: 300px;
+}
+.cls-1,.cls-2 {
+  fill:white;
+}
+.cls-1 {
+  fill-rule:evenodd;
+}
+.footer .menu {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.footer .menu li{
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  font-size: 15px;
+  align-items: flex-end;
+}
+.footer .menu .item {
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.referencias {
+  padding-left: 6.5%;
+  display: flex;
+  justify-content: center;
+  color: #FFF;
+  margin-left: 0;
+  padding-left: 0;
+
+}
+.referencias a{
+  color: #FFF;
+  text-decoration: none;
+}
+.midias {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.midias svg{
+  width: 30px;
+  height: 30px;
+  margin-right: 18px;
+  fill: white;
+}
+small {
+  border-top: solid cadetblue 2px;
+  display: flex;
+  justify-content: center;
+  color: #FFF;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media only screen and (max-width:1100px) {
+  .header {
+      font-family: 'Fira Code', monospace;
+      font-size: 14px;
+      width: 80%;
+      margin-left: 10%;
+  }
+  .form-group p {
+    font-size: 16px;
+  }
+  .form-group label {
+    font-size: 14px;
+  }
+  .footer .logo a {
+      width: 200px;
+  }
+  small {
+      font-size: 12px;
+  }
+}
+@media only screen and (max-width:1000px) {
+  .header {
+      font-family: 'Fira Code', monospace;
+      font-size: 14px;
+      width: 80%;
+      margin-left: 10%;
+  }
+  header {
+      height: auto;
+  }
+  header .container {
+      flex-direction: row;
+  }
+  nav ul {
+      flex-direction: column;
+      display: none;
+      position: absolute;
+      left: 0;
+      top:80px;
+      width: 100%;
+      background-color: #FFF;      
+  }
+  nav ul li {
+      border: var(--color-blue) solid 1px;
+  }
+  .menuMobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+  }
+  .coverbanner {
+      height: 80px;
+      display: block;
+  }
+  .banner {
+      height: 200px;
+  }
+  .banner .bannerlogo img {
+      width: 250px;
+      height: 250px;
+  }
+  .banner .bannertexto {
+      padding-left: 10px;
+  }
+  small {
+      font-size: 12px;
+  }
+}
+@media only screen and (max-width:650px){
+  .banner {
+      height: 150px;
+      justify-content: center;
+  }
+  .banner .bannerlogo img {
+      display: none;
+  }
+  .banner .bannertexto {
+      font-size: 30px;
+      padding: 0;
+      margin: 0;
+  }
+  .text h1 {
+      padding-bottom: 0;
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+  .text h2 {
+      padding-bottom: 0;
+      margin-top: 0;
+      margin-bottom: 30px;
+  }
+  .containerfooter .logo {
+      display: none;
+  }
+  .containerfooter .menu .referencias {
+      display: flex;
+      justify-content: center;
+  }
+  .referencias ul {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      justify-content: center;
+  }
+  .video {
+      width: 400px;
+      height: 230px;
+  }
+}
