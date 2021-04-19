@@ -10,6 +10,7 @@ body {
 }
 span {
     color: var(--color-blue);
+    text-transform: uppercase;
 }
 /* PRINCIPAL */
 #principal {
@@ -23,7 +24,6 @@ a:visited {
 }
 /* BANNER */
 .banner {
-    width: 90%;
     height: 250px;
     margin-left: auto;
     margin-right: auto;
@@ -137,7 +137,6 @@ a:visited {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-    margin-bottom: 100px;
 }
 .solucoes p {
     margin-left: 10%;
@@ -222,6 +221,7 @@ a:visited {
     text-decoration: none;
     font-size: 26px;
     color: black;
+    margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 0.25rem;
 }
@@ -236,7 +236,6 @@ a:visited {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-    margin-bottom: 50px;
 }
 .solucoesprincipal p {
     font-size: 16px;
@@ -378,7 +377,6 @@ a:visited {
     justify-content: space-between;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 15px;
     margin-bottom: 50px;
 }
 .informacoes strong {
@@ -431,7 +429,7 @@ a:visited {
     height: auto;
 }
 .add250 img{
-    width: 60%;
+    width: 50%;
     height: auto;
 }
 .center {
@@ -473,21 +471,6 @@ a:visited {
         width: 150px;
     }.solucoes .grid .item:last-child {
         display: none;
-    }
-    .informacao {
-        margin-top: 80px;
-    }
-    .informacoes {
-        display: flex;
-        flex-direction: column;
-    }
-    .informacoes-left {
-        order: 2;
-        width: 100%;
-    }
-    .informacoes-right {
-        order: 1;
-        width: 65%;
     }
 }
 
@@ -533,7 +516,7 @@ a:visited {
         font-size: 20px;
     }
     .informacoes-right img {
-        width: 100px;
+        width: 30%;
         height: auto;
     }
     .informacoes-right {
@@ -541,7 +524,6 @@ a:visited {
     }
     .informacoes-right-white {
         display: flex;
-        flex-direction: column;
         padding: 0;
         margin: 10px 0px;
     }
@@ -577,6 +559,24 @@ a:visited {
     small {
         font-size: 12px;
     }
+}
+@media only screen and (max-width:1000px){
+    .solucoesprincipal {
+        margin-top: 80px;
+    }
+    .informacoes {
+        display: flex;
+        flex-direction: column;
+    }
+    .informacoes-left {
+        order: 2;
+        width: 100%;
+    }
+    .informacoes-right {
+        order: 1;
+        width: 65%;
+    }
+
 }
 @media only screen and (max-width:650px){
     .banner {
@@ -646,12 +646,13 @@ a:visited {
         font-size: 15px;
         margin-bottom: 20px;
     }
-    .informacao {
-        margin-top: 0px;
-    }
     .informacao .button a{
         margin-left: 20px;
         margin-right: 20px;
+    }
+    .informacoes-right img {
+        width: 40%;
+        height: auto;
     }
     .containerfooter .logo {
         display: none;

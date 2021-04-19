@@ -412,10 +412,6 @@ a:visited {
     background-color: var(--color-blue);
     border-radius: 20px;
 }
-.informacoes-right img {
-    width: 180px;
-    height: 155px;
-}
 .informacoes-right-white {
     display: flex;
     align-items: center;
@@ -431,7 +427,7 @@ a:visited {
     height: auto;
 }
 .add250 img{
-    width: 60%;
+    width: 50%;
     height: auto;
 }
 .center {
