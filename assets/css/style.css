@@ -423,10 +423,13 @@ a:visited {
 }
 .add250 img{
     width: 50%;
+<<<<<<< HEAD
     height: auto;
 }
 .add200 img{
     width: 40%;
+=======
+>>>>>>> 923cb17707c7ab9fc934b0fe144ad84af8c1e51f
     height: auto;
 }
 .center {
