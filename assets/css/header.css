@@ -65,9 +65,10 @@ nav a {
     text-transform: uppercase;
     font-size: 20px;
 }
-nav a:hover {
+nav a:hover,
+.active {
     background-color: var(--color-hover-blue);
-    color: #FFF;
+    color: #FFF !important;
   }
 .containerheader .menu {
     display: flex;
